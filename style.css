@@ -219,6 +219,11 @@ a {
     overflow: hidden;
 }
 
+.welcome h2 span {
+    color: #911ae3;
+    transition-delay: 3s;
+}
+
 .welcome img {
     width: 200px;
     margin-bottom: -10px;

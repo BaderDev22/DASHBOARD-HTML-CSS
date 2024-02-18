@@ -1,0 +1,267 @@
+/*=============== VARIABLES ===============*/
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --border-color: #ccc;
+    --main-transition: 0.3s;
+}
+/*=============== GLOBAL RULES ===============*/
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+input {
+    border: none;
+}
+
+*:focus {
+    outline: 0;
+}
+
+body {
+    font-family: "Open Sans"; 
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* CUSTOM SRCOLLBAR */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--blue-color);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--blue-alt-color);
+}
+
+/*=============== MAIN PAGE ===============*/
+.page {
+    min-height: 100vh;
+    background-color: #f5f6f9;
+}
+
+/*=============== SIDEBAR ===============*/
+.page aside {
+    width: 200px;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.page aside > h3 {
+    margin-bottom: 50px;
+}
+
+.page aside ul li a {
+    margin-bottom: 5px;
+    transition: var(--main-transition);
+}
+.page aside ul li a.active,
+.page aside ul li a:hover {
+    background-color: #f6f6f6;
+}
+
+.page aside ul li a span {
+    margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+    .page aside {
+        width: 60px;
+        padding: 10px;
+    }
+    .page aside > h3 {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .page aside > h3::before,
+    .page aside > h3::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+}
+    .page aside > h3::before {
+        width: 80px;
+        height: 2px;
+        bottom: -20px;
+    }
+
+    .page aside > h3:after {
+        width: 12px;
+        height: 12px;
+        bottom: -29px;
+        border: 3px solid white;
+        border-radius: 50%;
+    }
+}
+
+/*=============== HEAD ===============*/
+.head .search input {
+    width: 160px;
+    margin-left: 5px;
+    padding-left: 30px;
+    border: 1px solid var(--border-color);
+    font-size: 12px;
+    transition: var(--main-transition);
+}
+
+.head .search input:focus {
+    width: 180px;
+}
+
+.head .search input::placeholder {
+    font-size: 12px;
+}
+
+.head .search input:focus::placeholder {
+    opacity: 0;
+}
+
+.head .search::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f002";
+    position: absolute;
+    font-size: 13px;
+    color: var(--grey-color);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+
+.head .icon .notification::before  {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: -5px;
+    right: -5px;
+    background-color: var(--red-color);
+    border-radius: 50%;
+}
+
+.head .icon img {
+    width: 32px;
+    height: 32px;
+    margin-left: 20px;
+}
+
+/*=============== PAGE TITLE ===============*/
+.page h1 {
+    margin: 20px 20px 100px;
+}
+
+.page h1::before,
+.page h1::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    bottom: -20px;
+    left: 0;
+}
+
+.page h1::before {
+    width: 120px;
+    background-color: white;
+}
+
+.page h1::after {
+    width: 40px;
+    background-color: black;
+}
+
+/*=============== WRAPPER ===============*/
+.wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: minmax(450px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+/*=============== WELCOME WIDGET ===============*/
+.welcome {
+    overflow: hidden;
+}
+
+.welcome img {
+    width: 200px;
+    margin-bottom: -10px;
+}
+
+.welcome .avatar {
+    width: 64px;
+    height: 64px;
+    margin-top: -32px;
+    margin-left: 20px;
+    border: 3px solid white;
+    box-shadow: 0 0 4px 4px #ddd;
+}
+
+.welcome .body {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.welcome .body > div {
+    flex: 1;
+}
+
+.welcome .visit {
+    margin: 0 15px 15px auto;
+    transform: var(--main-transition);
+}
+
+.welcome .visit:hover {
+    background-color: var(--blue-alt-color);
+}
+
+@media (max-width: 767px) {
+    .welcome .intro {
+        padding-bottom: 30px;
+    }
+
+    .welcome .avatar {
+        margin-left: 0;
+    }
+
+    .welcome .body div:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+/*=============== QUICK DRAFT WIDGET ===============*/

@@ -234,13 +234,14 @@ a {
     height: 64px;
     margin-top: -32px;
     margin-left: 20px;
-    border: 3px solid white;
+    padding: 2px;
+    border: 2px solid white;
     box-shadow: 0 0 4px 4px #ddd;
 }
 
 .welcome .body {
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
 .welcome .body > div {
@@ -269,4 +270,198 @@ a {
         margin-bottom: 20px;
     }
 }
+
 /*=============== QUICK DRAFT WIDGET ===============*/
+.quick-draft form input::placeholder,
+.quick-draft form textarea {
+    font-size: 13px;
+}
+
+.quick-draft form textarea {
+    resize: none;
+    min-height: 180px;
+}
+
+.quick-draft form input[type="submit"] {
+    margin-left: auto;
+    transform: var(--main-transition);
+}
+
+.quick-draft form input[type="submit"]:hover {
+    background-color: var(--blue-alt-color);
+}
+
+/*=============== YEARLY TARGET WIDGET ===============*/
+.target-row .progress {
+    height: 4px;
+}
+
+.target-row .icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.target-row .details {
+    flex: 1;
+}
+
+.target-row .details .progress > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.target-row .details .progress > span span {
+    position: absolute;
+    bottom: 16px;
+    right: -16px;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.target-row .details .progress > span span::after {
+    content: "";
+    position: absolute;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent;
+    right: 10px;
+    bottom: -13px;
+}
+
+/* Blue */
+.target-row .details .money > span span::after {
+    border-top-color: var(--blue-color);
+}
+
+.target-row .money > span {
+    background-color: var(--blue-color);
+}
+
+.target-row .icon.money,
+.target-row .progress.money {
+    background-color: rgb(0 117 255 / 20%);
+}
+
+/* Orange */
+.target-row .details .code > span span::after {
+    border-top-color: var(--orange-color);
+}
+
+.target-row .code > span {
+    background-color: var(--orange-color)
+}
+
+.target-row .icon.code,
+.target-row .progress.code {
+    background-color: rgba(245, 159, 11, 0.295);
+}
+
+/* Green */
+
+.target-row .details .user > span span::after {
+    border-top-color: var(--green-color);
+}
+
+.target-row .user > span {
+    background-color: var(--green-color);
+}
+
+.target-row .icon.user,
+.target-row .progress.user {
+    background-color: rgba(34, 197, 94, 0.226);
+}
+
+/*=============== TICKETS STATISTICS WIDGET ===============*/
+.tickets .box {
+    border: 1px solid var(--border-color);
+    width: calc(50% - 10px);
+}
+
+.tickets .box span {
+    font-size: 25px;
+}
+
+@media (max-width: 767px) {
+    .tickets .box {
+        width: 100%;
+    }
+}
+
+/*=============== LASTES NEWS WIDGET ===============*/
+.news .news-row img {
+    width: 100px;
+    margin-right: 15px;
+}
+
+.news .news-row .info {
+    flex-grow: 1;
+}
+
+.news .news-row .info h3 {
+    margin: 0 0 6px;
+}
+
+.news .news-row:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .news .label {
+        width: fit-content;
+        margin: 10px auto;
+    }
+}
+
+/*=============== LASTES TASKS WIDGET ===============*/
+.tasks .task-row .info {
+    flex-grow: 1;
+}
+
+.tasks .task-row:not(:last-child) {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.tasks .task-row i {
+    transition: var(--main-transition);
+}
+
+.tasks .task-row i:hover {
+    color: var(--red-color);
+}
+
+.tasks .done {
+    opacity: 0.3;
+}
+
+.tasks .done h3,
+.tasks .done p {
+    text-decoration: line-through;
+}
+
+/*=============== LATEST UPDATE WIDGET ===============*/
+.uploads .upload-row img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.uploads .upload-row .info {
+    flex: 1;
+}
+
+.uploads .upload-row:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+
+}
+

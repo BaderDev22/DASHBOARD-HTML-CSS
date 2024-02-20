@@ -67,7 +67,7 @@ a {
 
 /*=============== SIDEBAR ===============*/
 .page aside {
-    width: 200px;
+    width: 250px;
     box-shadow: 0 0 10px #ddd;
 }
 
@@ -498,6 +498,7 @@ a {
 .last-projects ul li:nth-child(4)::before {
     animation: show 2s infinite;
 }
+
 /* Animation */
 @keyframes show {
     0%, 100% {
@@ -515,6 +516,185 @@ a {
     bottom: 0;
     opacity: 0.2;
 }
+
+/*=============== REMINDERS  WIDGET ===============*/
+
+.reminders ul li span {
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+}
+
+.reminders ul li div {
+    border-left-width: 2px;
+    border-left-style: solid;
+    padding-left: 15px;
+}
+
+.reminders ul li .blue {
+    border-left-color: var(--blue-color);
+}
+
+.reminders ul li .green {
+    border-left-color: var(--green-color);
+}
+
+.reminders ul li .orange {
+    border-left-color: var(--orange-color);
+}
+
+.reminders ul li .red {
+    border-left-color: var(--red-color);
+}
+
+/*=============== LATEST POST ===============*/
+.post .info img {
+    width: 32px;
+    height: 32px; 
+    margin-right: 15px;
+}
+
+.post .post-content {
+    padding-bottom: 40px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+}
+
+.post .post-content .imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.post .post-content .imgs img {
+    width: 150px;
+    height: 150px;
+}
+
+/*=============== SOCIAL MEDIA STATS ===============*/
+.social-stats .box {
+    padding-left: 75px;
+}
+
+.social-stats .box i {
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--main-transition);
+}
+
+.social-stats .box i:hover {
+    transform: rotate(3deg);
+}
+
+/* Twitter */
+.social-stats .twitter span {
+    color: #1da1f2;
+}
+
+.social-stats .twitter {
+    background-color: rgb(29 161 242 / 20%);
+}
+
+.social-stats a.twitter,
+.social-stats i.twitter {
+    background-color: #1da1f2;
+} 
+
+/* Tiktok */
+.social-stats .tiktok span {
+    color: #333;
+}
+
+.social-stats .tiktok {
+    background-color: rgb(29 161 242 / 20%);
+}
+
+.social-stats a.tiktok,
+.social-stats i.tiktok {
+    background-color: #333;
+} 
+
+/* Telegrem */
+.social-stats .telegrem span {
+    color: #1c91cf;
+}
+
+.social-stats .telegrem {
+    background-color: rgb(82 123 224 / 45%);
+}
+
+.social-stats a.telegrem,
+.social-stats i.telegrem {
+    background-color: #1c91cf;
+
+} 
+
+/* Instagram */
+.social-stats .instagram span {
+    color: #e714cb;
+}
+
+.social-stats .instagram {
+    background-color: rgb(231 20 203 / 30%);
+}
+
+.social-stats a.instagram,
+.social-stats i.instagram {
+    background-color: #e714cb;
+} 
+
+/* Facebook */
+/* .social-stats .facebook span {
+    color: #1877f2;
+}
+
+.social-stats .facebook {
+    background-color: rgb(24 119 242 / 20%);
+}
+
+.social-stats a.facebook,
+.social-stats i.facebook {
+    background-color: #1877f2;
+} */
+
+/* Youtube */
+/* .social-stats .youtube span {
+    color: #ff0000;
+}
+
+.social-stats .youtube {
+    background-color: rgb(255 0 0 / 20%);
+}
+
+.social-stats a.youtube,
+.social-stats i.youtube {
+    background-color: #ff0000;
+}  */
+
+/* Linkedin */
+/* .social-stats .linkedin span {
+    color: #0077b5;
+}
+
+.social-stats .linkedin {
+    background-color: rgb(0 119 181 / 20%);
+}
+
+.social-stats a.linkedin,
+.social-stats i.linkedin {
+    background-color: #0077b5;
+}  */
+
+
 
 
 

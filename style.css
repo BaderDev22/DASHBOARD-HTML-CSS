@@ -123,6 +123,12 @@ a {
     }
 }
 
+/*=============== CONTENT ===============*/
+.page .content {
+    overflow: hidden;
+}
+
+
 /*=============== HEAD ===============*/
 .head .search input {
     width: 160px;
@@ -693,6 +699,42 @@ a {
 .social-stats i.linkedin {
     background-color: #0077b5;
 }  */
+
+/*=============== PROJECTS WIDGET ===============*/
+.projects .responsive-table  {
+    overflow-x: auto;
+}
+
+.projects table {
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+
+.projects table img {
+    width: 32px;
+    height: 32px;
+    padding: 2px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.projects table img:not(:first-child) {
+    margin-left: -20px;
+}
+
+.projects table td {
+    padding: 10px;
+    border: 1px solid #eee;
+}
+
+.projects thead td {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+.projects table tbody td .label {
+    font-size: 13px;
+}
 
 
 

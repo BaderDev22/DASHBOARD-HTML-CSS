@@ -113,6 +113,9 @@
 .mt-20 {
     margin-top: 20px;
 }
+.mb-0 {
+    margin-bottom: 0;
+}
 
 .mb-5 {
     margin-bottom: 5px;
@@ -247,4 +250,12 @@
 .btn-shape {
     padding: 4px 10px;
     border-radius: 6px;
+}
+
+.radio-shape {
+    height: 30px;
+    width: 80px;
+    position: relative;
+    border-radius: 20px;
+    transition: var(--main-transition);
 }

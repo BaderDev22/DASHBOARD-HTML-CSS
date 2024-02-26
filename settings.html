@@ -109,7 +109,7 @@
 
             <!--=============== WRAPPER ===============-->
             <div class="settings-page d-grid gap-20 m-20">
-                <div class="box p-20 bg-white rad-10">
+                <div class="site-control p-20 bg-white rad-10">
                     <h2 class="mt-0 mb-15"> Site Control</h2>
                     <p class="mt-0 mb-20 c-grey fs-14">Control The Website if There Is Mainstenance</p>
                     <div class="control flex-between mb-20">
@@ -118,7 +118,7 @@
                             <span class="d-block c-grey fs-14 mt-10 mb-20">Open/Close Website And Type The Reason</span>
                         </div>
                         <label>
-                            <input type="checkbox" class="toggle-checkbox">
+                            <input type="checkbox" class="toggle-checkbox" checked>
                             <div class="toggle-switch"></div>
                         </label>
                     </div>
@@ -126,11 +126,107 @@
                 </div>
 
                 <div class="general-info p-20 bg-white rad-10">
-                    <h2 class="mt-0 mb-15">General Info</h2>
+                    <h2 class="mt-0 mb-10">General Info</h2>
                     <p class="mt-0 mb-20 c-grey">General Information About Your Account</p>
                     <div class="info">
-                        <label for="name" class="c-grey d-block mb-10"> First Name</label>
-                            <input type="text" name="name" id="name" placeholder="First Name" class="rad-8 p-10 d-block w-full fs-14" checked>
+                        
+                        <div>
+                            <label for="first-name" class="c-grey d-block mb-10 fs-14"> First Name</label>
+                            <input type="text" name="first-name" id="first-name" placeholder="First Name" class="rad-8 mb-10 p-10 d-block w-full fs-14">
+                        </div>
+
+                        <div>
+                            <label for="last-name" class="c-grey d-block mb-10 fs-14"> Last Name</label>
+                            <input type="text" name="last-name" id="last-name" placeholder="Last Name" class="rad-8 mb-10 p-10 d-block w-full fs-14">
+                        </div>
+
+                        <div>
+                            <label for="name" class="c-grey d-block mb-10 fs-14">Email</label>
+                            <input type="email" name="email" id="email" disabled value="o@nn.sa" readonly class="rad-8 mb-10 p-10 d-block w-full fs-14 c-grey">
+                            <a href="settings.html" class="c-blue">Change</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="security-info p-20 bg-white rad-10">
+                    <h2 class="mt-0 mb-10">Security Info</h2>
+                    <p class="mt-0 mb-20 c-grey">Security Information About Your Account</p>
+                    <div class="flex-between">
+                        <div>
+                            <p>Password</p>
+                            <span class="d-block c-grey fs-14 mt-10">Last Change On 25/10/2021</span>
+                        </div>
+                        <a href="settings.html" class="btn-shape bg-blue c-white">Change</a>
+                    </div>
+                    <div class="flex-between">
+                        <div>
+                            <p>Two-Factor Authentication</p>
+                            <span class="d-block c-grey fs-14 mt-10">Enable/Disable The Feature</span>
+                        </div>
+                        <label>
+                            <input type="checkbox" class="toggle-checkbox" checked>
+                            <div class="toggle-switch"></div>
+                        </label>
+                    </div>
+                    <div class="flex-between">
+                        <div>
+                            <p>Devices</p>
+                            <span class="d-block c-grey fs-14 mt-10">Check The Login Devices List</span>
+                        </div>
+                        <a href="settings.html" class="btn-shape bg-eee c-black">Devices</a>
+                    </div>
+                </div>
+
+                <div class="social-info p-20 bg-white rad-10">
+                    <h2 class="mt-0 mb-10">Social Info</h2>
+                    <p class="mt-0 mb-20 c-grey">Social Media Information</p>
+                    <div class="social-row d-flex align-c mb-10">
+                        <i class="fa-brands fa-twitter c-grey"></i>
+                        <input class="w-full" type="text" placeholder="Twitter Username">
+                    </div>
+
+                    <div class="social-row d-flex align-c mb-10">
+                        <i class="fa-brands fa-facebook-f c-grey"></i>
+                        <input class="w-full" type="text" placeholder="Facebook Username">
+                    </div>
+
+                    <div class="social-row d-flex align-c mb-10">
+                        <i class="fa-brands fa-linkedin c-grey"></i>
+                        <input class="w-full" type="text" placeholder="Linkedin Username">
+                    </div>
+                    
+                    <div class="social-row d-flex align-c mb-10">
+                        <i class="fa-brands fa-youtube c-grey"></i>
+                        <input class="w-full" type="text" placeholder="Youtube Username">
+                    </div>
+                </div>
+
+                <div class="widgets-control p-20 bg-white rad-10">
+                    <h2 class="mt-0 mb-10">Widgets Control</h2>
+                    <p class="mt-0 mb-20 c-grey">Show/Hide Widgets</p>
+                    <div class="control d-flex align-c mb-15">
+                        <input type="checkbox" id="one">
+                        <label for="one">Quick Draft</label>
+                    </div>
+
+                    <div class="control d-flex align-c mb-15">
+                        <input type="checkbox" id="two">
+                        <label for="two">Yearly Targets</label>
+                    </div>
+                    
+                    <div class="control d-flex align-c mb-15">
+                        <input type="checkbox" id="three">
+                        <label for="three">Tickets Statistics</label>
+                    </div>
+                    
+                    <div class="control d-flex align-c mb-15">
+                        <input type="checkbox" id="four">
+                        <label for="four">Latest News</label>
+                    </div>
+
+                    <div class="control d-flex align-c mb-15">
+                        <input type="checkbox" id="five">
+                        <label for="five">Latest Tasks</label>
                     </div>
                 </div>
             </div>

@@ -745,62 +745,16 @@ a {
 /*=============== SETTINGS PAGE ===============*/
 .settings-page {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 @media (max-width: 767px) {
     .settings-page {
         grid-template-columns: minmax(200px, 1fr);
-        gap: 10px;
         margin-left: 10px;
         margin-right: 10px;
     }
-}
-
-.widgets-control .control input {
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-.widgets-control .control label {
-    padding-left: 30px;
-    position: relative;
-    cursor: pointer;
-}
-
-.widgets-control .control label::before,
-.widgets-control .control label::after {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -9px;
-    border-radius: 4px;
-}
-
-.widgets-control .control label::before {
-    content: "";
-    width: 14px;
-    height: 14px;
-    border: 1px solid var(--grey-color);
-}
-
-.widgets-control .control label::after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f00c";
-    background-color: var(--blue-color);
-    color: white;
-    width: 17px;
-    height: 17px;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0) rotate(360deg);
-    transition: var(--main-transition);
-}
-
-.widgets-control .control input[type="checkbox"]:checked + label::after {
-    transform: scale(1) rotate(0);
 }
 
 .toggle-checkbox {
@@ -810,19 +764,20 @@ a {
 }
 
 .toggle-switch {
+    position: relative;
     width: 78px;
     height: 32px;
     background-color: #ccc;
     border-radius: 16px;
-    position: relative;
+    cursor: pointer;
     transition: var(--main-transition);
 }
 
 .toggle-switch::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    position: absolute;
     content: "\f00d";
+    position: absolute;
     width: 24px;
     height: 24px;
     top: 4px;
@@ -836,81 +791,209 @@ a {
     transition: var(--main-transition);
 }
 
-.toggle-checkbox:checked + .toggle-switch {
+label input[type="checkbox"]:checked + .toggle-switch {
     background-color: var(--blue-color);
 }
 
-.toggle-checkbox:checked + .toggle-switch::before {
-    color: var(--blue-color);
+label input[type="checkbox"]:checked + .toggle-switch::before {
     content: "\f00c";
-    left: 65%;
+    left: 50px;
+    color: var(--blue-alt-color);
 }
 
-.settings-page textarea {
-    min-height: 150px;
+.site-control textarea {
     resize: none;
-    border-color: var(--border-color);
-}
-
-.settings-page textarea::placeholder {
-    font-size: 13px;
-}
-
-.settings-page .info input {
+    min-height: 150px;
     border: 1px solid var(--border-color);
 }
 
-.settings-page :disabled {
-    display: inline-flex;
+.site-control textarea::placeholder {
+    font-size: 14px;
+}
+
+/*=============== GENERAL INFO WEDGIT ===============*/
+.general-info .email {
     margin-right: 10px;
-    cursor: no-drop;
-    background-color: #f0f4f8;
+    display: inline-flex;
     width: calc(100% - 80px);
 }
 
-.settings-page .security-info > div:not(:last-child) {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
+.general-info :disabled {
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb;
+}
+
+/*=============== SECURITY INFO WEDGIT ===============*/
+.security-info .sec-box:not(:last-child) {
     border-bottom: 1px solid var(--border-color);
 }
 
-.settings-page .social-row input {
-    height: 40px;
-    background-color: #f6f6f6;
-    padding-left: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 0 8px 8px 0;
-}
-
-.settings-page .social-info > div:focus-within i {
-    color: black;
-}
-
-.settings-page .social-row input::placeholder {
-    font-size: 13px;
-}
-
-.settings-page .social-row i {
+/*=============== SOCIAL INFO WEDGIT ===============*/
+.social-info .box i {
     width: 40px;
     height: 40px;
     background-color: #f6f6f6;
-    border: 1px solid var(--border-color);
-    border-right: none;
-    border-radius: 8px 0 0 8px;
-    transition: var(--main-transition);display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid var(--border-color);
+    border-right: none;
+    padding: 15px;
+    border-radius: 6px 0px 0 6px;
+    transition: var(--main-transition);
 }
 
-/* .settings-page .control input[type="checkbox"] {
+.social-info > div:focus-within i {
+    color: black;
+}
+
+.social-info input {
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid var(--border-color);
+    border-radius: 0 6px 6px 0;
+    padding-left: 10px;
+}
+
+.social-info input::placeholder {
+    font-size: 14px;
+}
+
+/*=============== WEDGIT CONTROL ===============*/
+/*=============== SOCIAL INFO WEDGIT ===============*/
+.wedgits-control .control input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
     display: none;
-} */
+}
+.wedgits-control .control label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.wedgits-control .control label::before,
+.wedgits-control .control label::after {
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    left: 0;
+    border-radius: 4px;
+}
+
+.wedgits-control .control label::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--grey-color);
+}
+
+.wedgits-control .control label::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) rotate(360deg);
+    transition: var(--main-transition);
+}
+
+.wedgits-control .control input[type="checkbox"]:checked + label::after {
+    transform: scale(1) rotate(0);
+}
+
+/*=============== BACKUP MANAGER WEDGIT ===============*/
+.backup-manager .date input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.backup-manager .date label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.backup-manager .date label::before,
+.backup-manager .date label::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.backup-manager .date label::before {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--grey-color);
+    top: 50%;
+    margin-top: -11px;
+    left: 0;
+}
+
+.backup-manager .date label::after {
+    width: 12px;
+    height: 12px;
+    background-color: var(--blue-color);
+    top: 5px;
+    left: 5px;
+    transform: scale(0);
+    transition: var(--main-transition);
+}
+
+.backup-manager .date input[type="radio"]:checked + label::before {
+    border-color: var(--blue-color);
+}
+
+.backup-manager .date input[type="radio"]:checked + label::after {
+    transform: scale(1);
+}
+
+.backup-manager .servers {
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.backup-manager .servers .server {
+    position: relative;
+    border: 2px solid #ddd;
+}
+
+.backup-manager .servers input[type="radio"]:checked + .server {
+    color: var(--blue-color);
+    border-color: var(--blue-color);
+}
+
+.backup-manager .servers input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.backup-manager .servers .server label {
+    margin: 15px;
+    cursor: pointer;
+}
+
+.backup-manager .servers .server label i {
+    display: block;
+}
 
 
-
-
+@media (max-width: 767px) {
+    .backup-manager .servers {
+        flex-wrap: wrap;
+    }
+}
 
 
 

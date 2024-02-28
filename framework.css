@@ -263,3 +263,8 @@
     border-radius: 20px;
     transition: var(--main-transition);
 }
+
+.input-b {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}

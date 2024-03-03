@@ -925,34 +925,33 @@ label input[type="checkbox"]:checked + .toggle-switch::before {
     position: relative;
 }
 
-.backup-manager .date label::before,
-.backup-manager .date label::after {
+.backup-manager .date label::before {
     content: "";
     position: absolute;
-    border-radius: 50%;
-}
-
-.backup-manager .date label::before {
-    width: 18px;
-    height: 18px;
-    border: 1px solid var(--grey-color);
     top: 50%;
     margin-top: -11px;
     left: 0;
-}
-
-.backup-manager .date label::after {
-    width: 12px;
-    height: 12px;
-    background-color: var(--blue-color);
-    top: 4px;
-    left: 4px;
-    transform: scale(0);
-    transition: var(--main-transition);
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--grey-color);
+    border-radius: 50%;
 }
 
 .backup-manager .date input[type="radio"]:checked + label::before {
     border-color: var(--blue-color);
+}
+
+.backup-manager .date input[type="radio"] + label::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--blue-color);
+    top: 3px;
+    left: 5px;
+    transform: scale(0);
+    transition: var(--main-transition);
 }
 
 .backup-manager .date input[type="radio"]:checked + label::after {
@@ -994,6 +993,144 @@ label input[type="checkbox"]:checked + .toggle-switch::before {
         flex-wrap: wrap;
     }
 }
+
+/*=============== OVERVIEW WEDGIT ===============*/
+@media (max-width: 787px) {
+    .profile-page .overview {
+        flex-direction: column;
+    }
+}
+
+.profile-page .avatar-box {
+    width: 300px;
+}
+
+@media (min-width: 767px) {
+    .profile-page .avatar-box {
+        border-right: 1px solid #eee;
+    }
+}
+
+.profile-page .avatar-box > img{
+    width: 120px;
+    height: 120px;
+}
+
+.profile-page .avatar-box .level {
+    width: 70%;
+    height: 6px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.profile-page .avatar-box .level span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--blue-color);
+    border-radius: 6px;
+}
+
+.profile-page .info-box .box {
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    transition: var(--main-transition);
+}
+
+.profile-page .info-box .box:hover {
+    background-color: #f9f9f9;
+}
+
+.profile-page .info-box .box > div {
+    min-width: 250px;
+    padding: 10px 0 0;
+}
+
+.profile-page .info-box h4 {
+    width: 100%;
+    font-weight: normal;
+}
+
+.profile-page .info-box .toggle-switch {
+    height: 20px;
+}
+
+.profile-page .info-box .toggle-switch::before {
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+}
+
+.profile-page .info-box input[type="checkbox"]:checked + .toggle-switch::before {
+    left: 62px;
+}
+
+@media (max-width: 767px) {
+    .profile-page .info-box .toggle-switch {
+        margin: auto;
+    }
+}
+
+/*=============== OTHER DATA ===============*/
+@media (max-width: 767px) {
+    .profile-page .other-data {
+        flex-direction: column;
+    }
+}
+
+/*=============== SKILLS WEDGIT ===============*/
+.profile-page .my-skills {
+    flex-grow: 1;
+}
+
+.profile-page .my-skills ul li {
+    padding: 15px 0;
+}
+.profile-page .my-skills ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.profile-page .my-skills ul li span:not(:last-child) {
+    margin-right: 10px;
+}
+
+/*=============== Activitis WEDGIT ===============*/
+.profile-page .activitis {
+    flex-grow: 2;
+}
+
+.profile-page .activitis .box {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.profile-page .activitis .box img {
+    width: 65px;
+    height: 65px;
+    margin-right: 10px;
+}
+
+.profile-page .activitis .box .info {
+    flex: 1;
+}
+
+@media (max-width: 767px) {
+    .profile-page .activitis .box {
+        flex-direction: column;
+    }
+
+    .profile-page .activitis .box img {
+        margin-right: 0;
+    }
+
+    .profile-page .activitis .box .info {
+        margin: 15px 0;
+    }
+}
+
+
 
 
 

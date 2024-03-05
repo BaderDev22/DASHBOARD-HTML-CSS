@@ -70,6 +70,10 @@
     padding: 20px;
 }
 
+.pt-10 {
+    padding-top: 10px;
+}
+
 .pt-15 {
     padding-top: 15px;
 }
@@ -242,6 +246,10 @@
     position: relative;
 }
 
+.p-absolute {
+    position: absolute;
+}
+
 /*=============== COMPONENTS ===============*/
 .flex-between {
     display: flex;
@@ -266,6 +274,11 @@
     position: relative;
     border-radius: 20px;
     transition: var(--main-transition);
+}
+
+.border-eee {    
+    border: 1px solid #eee;
+    border-radius: 6px;
 }
 
 .input-b {
